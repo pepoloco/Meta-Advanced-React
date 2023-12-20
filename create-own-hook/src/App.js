@@ -34,7 +34,7 @@ export default function App() {
 function usePrevious(val) {
   const ref = useRef();
   useEffect(()=>{
-    const val = ref;
-  })
+   ref.current = val
+  },[val])
   return ref.current
 }
